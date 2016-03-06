@@ -23,7 +23,7 @@ default_platform :mac
 platform :mac do
   before_all do
     update_fastlane
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    recreate_schemes
     cocoapods
     
   end
