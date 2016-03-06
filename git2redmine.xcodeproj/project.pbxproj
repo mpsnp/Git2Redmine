@@ -17,7 +17,8 @@
 		D3136E621C8723EA000F53AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3136E611C8723EA000F53AC /* Assets.xcassets */; };
 		D3136E651C8723EA000F53AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3136E631C8723EA000F53AC /* Main.storyboard */; };
 		D3CE38BE1C87A8C3005A7F5B /* GRRepositoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE38BD1C87A8C3005A7F5B /* GRRepositoryManager.m */; };
-		D3CE38E51C8987DC005A7F5B /* GitUpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3136E721C872411000F53AC /* GitUpKit.framework */; };
+		D3CE390C1C8C6544005A7F5B /* GitUpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3136E721C872411000F53AC /* GitUpKit.framework */; };
+		D3CE390D1C8C6544005A7F5B /* GitUpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3136E721C872411000F53AC /* GitUpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F07E96E48AEBF74A62ACDE91 /* libPods-G2R.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61E061B761FE5422C43A6E /* libPods-G2R.a */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,28 @@
 			remoteGlobalIDString = E2C338C419F8562F00063D95;
 			remoteInfo = Tests;
 		};
+		D3CE390E1C8C6544005A7F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3136E6A1C872411000F53AC /* GitUpKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E267E1A71B84D6C500BAB377;
+			remoteInfo = "GitUpKit (OSX)";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3CE39101C8C6544005A7F5B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3CE390D1C8C6544005A7F5B /* GitUpKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09E65F339B71BE087B2D6B12 /* Pods-git2redmine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git2redmine.release.xcconfig"; path = "Pods/Target Support Files/Pods-git2redmine/Pods-git2redmine.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CE38E51C8987DC005A7F5B /* GitUpKit.framework in Frameworks */,
+				D3CE390C1C8C6544005A7F5B /* GitUpKit.framework in Frameworks */,
 				F07E96E48AEBF74A62ACDE91 /* libPods-G2R.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,10 +224,12 @@
 				D3136E541C8723EA000F53AC /* Resources */,
 				98EDB8ABB1660FE31C8B740E /* Embed Pods Frameworks */,
 				9EDA7D1A87C8BD95A3B75690 /* Copy Pods Resources */,
+				D3CE39101C8C6544005A7F5B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D3CE390F1C8C6544005A7F5B /* PBXTargetDependency */,
 			);
 			name = G2R;
 			productName = G2R;
@@ -351,6 +375,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3CE390F1C8C6544005A7F5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GitUpKit (OSX)";
+			targetProxy = D3CE390E1C8C6544005A7F5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3136E631C8723EA000F53AC /* Main.storyboard */ = {

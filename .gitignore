@@ -49,6 +49,8 @@ xcuserdata/
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
+*.app
+*.dSYM*
 
 # CocoaPods
 #
