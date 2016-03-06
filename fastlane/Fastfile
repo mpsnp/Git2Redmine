@@ -23,7 +23,7 @@ default_platform :mac
 platform :mac do
   before_all do
     update_fastlane
-    recreate_schemes
+    recreate_schemes(project: "Git2Redmine.xcodeproj")
     cocoapods
     
   end
