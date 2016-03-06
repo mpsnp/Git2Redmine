@@ -52,6 +52,8 @@ xcuserdata/
 *.app
 *.dSYM*
 
+fastlane/report.xml
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

@@ -1,0 +1,16 @@
+language: objective-c
+before_install:
+- gem install fastlane
+script:
+- fastlane beta
+before_deploy:
+- tar -cvzf G2R.tar.gz G2R.app
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: KfeKbv0WcULS0zfyszm8FtisxT6PjZawZ2JEObmxdBYac4bPBNPrK0KkWAhTnoUJfYd0wooTgCZuQqapzS718B/4wqBxEAUKpm0legBqdeWTbdZodvhJl9h5DwJecpgkBu9O4VJR2wBAWq7v2jgx80k6wvyi7JVchfLsJJODC/coyPFa6KWO/uUiLubcNKSWO4hlOyNIEldRsz0JyO5OMe8M/xp4HqOJ6tXwLpjCXTrdXfBeUUbuWc9y0qX/9q4VvfUUTYHz4qqtWoYhL4ic3FzW+dR9U4jVFB9S+S01/rf+Eq7Y3djrDViz/nMSJ0Z+7Z3CRIOW5VBre7yfnrermFlj0S9hklao06ascchPuwiyZ4FKOWsUV4tTiKmxPJYE15gncavFzbmjEklz2OzN/66AQMsi8+x08D8mx4BdOzrbtXvpnbpvHMZrl/bAJqlSagDLPd+ShvjeN4iCDNY9+8diNhbWmsmdFozevlyaF0Jai4qnNnhzCmBylMM+TGuN9m+0uv4mDLxoJDfak46DgQnKuDSK72fCX5MzwU1/RBMvTKJWZuFazNXqVNS//iBLrDRZelJ5/+5Wtqxl9O5UwfwqwMr89iLVGDseiZPhBjH4yA2EQTv9QUGhAii7tHfj/7HI1FroYzxGA0es64R9PTb3dLm4bjVlfCnoHNihKSo=
+  file: "*.tar.gz"
+  file_glob: true
+  on:
+    tags: true
