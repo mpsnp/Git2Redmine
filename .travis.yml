@@ -1,7 +1,7 @@
 language: objective-c
 before_install:
 - gem install fastlane
-- gem install cocoapods -v 1.0.0.beta.3
+- gem update cocoapods
 script:
 - fastlane beta
 before_deploy:
